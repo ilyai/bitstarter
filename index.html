@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>My First Bitstarter</title>
+    <title>RPiCluster</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="raspberry pi, cluster, linux">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
@@ -74,6 +75,9 @@
       .video, .thermometer, .order, .social, .statistics {
         text-align: center;
       }
+      .video iframe {
+        max-width: 100%;
+      }
       .statistics h3, .statistics p {
         color: white;
       }
@@ -112,7 +116,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Bitstarter</a>
+          <a class="brand" href="#">RPiCluster &reg;</a>
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -133,19 +137,19 @@
       <!-- www.google.com/fonts/specimen/Ubuntu#pairings -->
       <div class="row-fluid heading">
         <div class="span12">
-          <h1>Product</h1>
+          <h1>RPiCluster &reg;</h1>
         </div>
       </div>
       <div class="row-fluid subheading">
         <div class="span12">
           <!-- Special typography from Bootstrap for lead paragraph. -->
           <!-- http://twitter.github.io/bootstrap/base-css.html#typography -->
-          <p class="lead">One sentence description.</p>
+          <p class="lead">Raspberry Pi-Based Beowulf Cluster</p>
         </div>
       </div>
       <div class="row-fluid pitch">
         <div class="span5 offset1 video">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <iframe width="480" height="300" src="//www.youtube.com/embed/f6bQsi2C1o4" frameborder="0" allowfullscreen></iframe>
         </div>
 
         <!-- We define a new 'actions' div to contain statistics, order, and share buttons.-->
@@ -157,17 +161,17 @@
                 different in horizontal and vertical layouts, illustrating
                 media queries. -->
                 <div class="linediv-l">
-                <h3>1000</h3> <p>backers</p>
+                <h3>0</h3> <p>backers</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-c">
-                  <h3>$6000</h3> <p>of $10,000</p>
+                  <h3>$0</h3> <p>of $100,000</p>
                 </div>
               </div>
               <div class="span4">
                 <div class="linediv-r">
-                <h3>10</h3> <p>days left</p>
+                <h3>30</h3> <p>days left</p>
                 </div>
               </div>
             </div>
@@ -176,8 +180,8 @@
             <!-- Bootstrap progress bar -->
             <!-- http://twitter.github.io/bootstrap/components.html#progress -->
             <div class="thermometer progress active">
-              <div class="bar bar-success" style="width: 60%;"></div>
-              <div class="bar bar-warning" style="width: 40%;"></div>
+              <div class="bar bar-success" style="width: 0%;"></div>
+              <div class="bar bar-warning" style="width: 100%;"></div>
             </div>
           </div>
           <div class="span6 offset3 order">
@@ -200,21 +204,17 @@
       <!-- http://placehold.it -->
       <div class="row-fluid section1">
         <div class="span5 offset1 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="http://i.imgur.com/YYOOwMs.jpg">
         </div>
         <div class="span5 copy">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            Beowulf cluster is simply a collection 
+of identical, (typically) commodity computer hardware based systems, networked together and running 
+some kind of parallel processing software that allows each node in the cluster to share data and 
+computation. Typically, the parallel programming software is MPI (Message Passing Interface), which 
+utilizes TCP/IP along with some libraries to allow programmers to create parallel programs that can split
+a task into parts suitable to run on multiple machines simultaneously. MPI provides an API that enables
+both asynchronous and synchronous process interaction.
           </p>
         </div>
       </div>
@@ -222,21 +222,17 @@
       <div class="row-fluid section2">
         <div class="span5 offset1 copy copy-right">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            porta, dui sagittis hendrerit rutrum, nunc leo tempus nisl, eu
-            mollis justo velit at nunc. Fusce nec egestas sem. Donec
-            fringilla ante lectus, a pellentesque lacus dignissim ac. Sed
-            volutpat lorem ut congue malesuada. In facilisis scelerisque
-            turpis sed lacinia. Donec in orci lectus. Donec auctor semper
-            quam, eget rhoncus purus fringilla id. Phasellus id nibh eu
-            risus ultrices adipiscing.  Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit. Donec porta, dui sagittis hendrerit
-            rutrum, nunc leo tempus nisl, eu mollis justo velit at
-            nunc. Fusce nec egestas sem. Donec fringilla.
+            The RPiCluster provides another option for continuing 
+development of projects that require MPI or Java in a cluster environment. Second, RPis provide a 
+unique feature in that they have external low-level hardware interfaces for embedded systems use, 
+such as I2C, SPI, UART, and GPIO. This is very useful to electrical engineers requiring testing of 
+embedded hardware on a large scale. Third, having user only access to a cluster is fine if the cluster 
+has all the necessary tools installed. If not however, you must then work with the cluster administrator 
+to get things working. Finally, RPis are cheap!
           </p>
         </div>
         <div class="span5 asset">
-          <img class="img-polaroid" src="http://placehold.it/480x300">
+          <img class="img-polaroid" src="http://i.imgur.com/RMn6inn.jpg">
         </div>
       </div>
 
@@ -251,12 +247,14 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseOne">
-                    What does FAQ stand for?
+                    How cheap RPi is?
                   </a>
                 </div>
                 <div id="collapseOne" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    Frequently Asked Question.
+                    The cost for an RPi with an 8GB SD card is ~$45. For comparison, each node in 
+the Onyx cluster was somewhere between $1,000 and $1,500. So, for near the price of one PC-based 
+node, we can create a 32 node Raspberry Pi cluster!
                   </div>
                 </div>
               </div>
@@ -264,12 +262,16 @@
                 <div class="accordion-heading">
                   <a class="accordion-toggle" data-toggle="collapse"
                      data-parent="#accordion2" href="#collapseTwo">
-                    What's a Frequently Asked Question?
+                    For which kinds of programs it is better suited?
                   </a>
                 </div>
                 <div id="collapseTwo" class="accordion-body collapse">
                   <div class="accordion-inner">
-                    A question which is commonly asked by users.
+                  The overall value proposition is pretty good, particularly if cluster program development is focused on 
+distributed computing rather than parallel processing. That is, if the programs being developed for the 
+cluster are distributed in nature, but not terribly CPU intensive. Compute-intensive applications will 
+need to look elsewhere, as there simply is not enough “horse power” available to make the RPi a 
+terribly useful choice for cluster computing.
                   </div>
                 </div>
               </div>
@@ -282,11 +284,7 @@
       <!-- http://creativecommons.org/licenses/ -->
       <div class="row-fluid footer">
         <div class="span12">
-          <p>This work is licensed under
-            the <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC
-              By-SA 3.0
-            </a>, without all the cruft that would otherwise be
-            put at the bottom of the page.</p>
+          <p>This work is based on the information from open sources, originally created by Joshua Kiepert.</p>
         </div>
       </div>
     </div>
