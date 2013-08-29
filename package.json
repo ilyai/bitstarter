@@ -7,10 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "2.5.x",
     "commander": "~2.0.0",
     "restler": "~2.0.1",
-    "cheerio": "~0.12.1"
+    "cheerio": "~0.12.1",
+    "sequelize": "~2.0.0-alpha2",
+    "pg": "~2.3.1",
+    "ejs": "~0.8.4",
+    "express": "~3.3.4",
+    "async": "~0.2.9"
   },
   "engines": {
     "node": "0.8.x",
