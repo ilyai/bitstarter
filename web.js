@@ -11,6 +11,8 @@ var app = express();
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
+app.use(express.static(__dirname + '/public'));
+app.use(express.bodyParser());
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
@@ -19,7 +21,7 @@ app.get('/', function(request, response) {
 });
 
 // Render example.com/orders
-app.get('/orders', function(request, response) {
+app.get('/donations', function(request, response) {
   global.db.Order.findAll().success(function(orders) {
     var orders_json = [];
     orders.forEach(function(order) {
@@ -52,7 +54,7 @@ app.get('/refresh_orders', function(request, response) {
             response.send("error adding orders");
           } else {
             // orders added successfully
-            response.redirect("/orders");
+            response.redirect("/donations");
           }
         });
       } catch (error) {
@@ -66,7 +68,31 @@ app.get('/refresh_orders', function(request, response) {
       response.send("error syncing orders");
     });
   });
+});
 
+app.get('/about', function(request, response) {
+  response.render("about");
+});
+
+app.get('/contact', function(request, response) {
+  response.render("contact");
+});
+
+app.post('/contact', function(request, response) {
+  var params = {
+    username: request.body.username,
+    message: request.body.message
+  };
+  if (params.username && params.message) {
+    addContact(params).success(function() {
+      response.redirect('/contact');
+    }).error(function(err) {
+      console.error("error saving contact message: " + err);
+      response.redirect('/contact');
+    });
+  } else {
+    response.redirect('/contact');
+  }
 });
 
 // sync the database and start the server
@@ -108,4 +134,9 @@ var addOrder = function(order_obj, callback) {
       }
     });
   }
+};
+
+var addContact = function(params) {
+  var contact = global.db.Contact.build(params);
+  return contact.save();
 };

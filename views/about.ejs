@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Orders</title>
+    <title>About</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
@@ -27,8 +27,8 @@
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li><a href="/">Home</a></li>
-              <li class="active"><a href="/donations">Donations</a></li>
-              <li><a href="/about">About</a></li>
+              <li><a href="/donations">Donations</a></li>
+              <li class="active"><a href="/about">About</a></li>
               <li><a href="/contact">Contact</a></li>
             </ul>
           </div><!--/.nav-collapse -->
@@ -36,23 +36,19 @@
       </div>
     </div>
     <div class="container">
-      <h2>Coinbase orders</h2>
-      <table class="table table-striped">
-        <thead>
-          <th>Coinbase ID</th>
-          <th>BTC</th>
-          <th>Transaction time</th>
-        </thead>
-        <tbody>
-          <% for(var i=0; i<orders.length; i++) {%>
-             <tr>
-               <td><%= orders[i].id %></td>
-               <td><%= orders[i].amount %></td>
-               <td><%= orders[i].time %></td>
-             </tr>
-             <% } %>
-      </table>
-      <a href="/refresh_orders">Refresh orders from coinbase</a>
+      <h2>About</h2>
+      <p>
+        The purpose of this site is to support and promote PRiCluster project, originally created by Joshua Kiepert.
+      </p>
+      <p>
+        You can read more information in this document &mdash; <a
+          target="_blank"
+          href="http://coen.boisestate.edu/ece/files/2013/05/Creating.a.Raspberry.Pi-Based.Beowulf.Cluster_v2.pdf"
+          >Creating.a.Raspberry.Pi-Based.Beowulf.Cluster_v2.pdf</a>.
+      </p>
+      <p>
+        Please let me know if you are already affiliated with this project or interested in supporting it.
+      </p>
     </div>
   </body>
 </html>
