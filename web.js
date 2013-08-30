@@ -13,11 +13,14 @@ app.set('view engine', 'ejs');
 app.set('port', process.env.PORT || 8080);
 app.use(express.static(__dirname + '/public'));
 app.use(express.bodyParser());
+app.use(function(request, response, next) {
+  app.locals({path: request.path});
+  next();
+});
 
 // Render homepage (note trailing slash): example.com/
 app.get('/', function(request, response) {
-  var data = fs.readFileSync('index.html').toString();
-  response.send(data);
+  response.render("index");
 });
 
 // Render example.com/orders
