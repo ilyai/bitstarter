@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="raspberry pi, cluster, linux">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css">
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
     <link rel="stylesheet" href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css">
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/styles.css">
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-42901715-1']);
@@ -21,6 +21,7 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <script type="text/javascript" src="/javascripts/application.js"></script>
   </head>
   <body>
 
@@ -82,17 +83,17 @@
                   different in horizontal and vertical layouts, illustrating
                   media queries. -->
                   <div class="linediv-l">
-                  <h3>0</h3> <p>backers</p>
+                  <h3 id="backers">&mdash;</h3> <p>backers</p>
                   </div>
                 </div>
                 <div class="span4">
                   <div class="linediv-c">
-                    <h3>$0</h3> <p>of $100,000</p>
+                    <h3><i class="icon-btc"></i><span id="amount">&mdash;</span></h3> <p>of <em><abbr title="any reasonable amount">x</abbr></em></p>
                   </div>
                 </div>
                 <div class="span4">
                   <div class="linediv-r">
-                  <h3>30</h3> <p>days left</p>
+                  <h3>∞</h3> <p>days left</p>
                   </div>
                 </div>
               </div>

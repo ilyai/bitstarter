@@ -27,8 +27,15 @@ app.get('/donations', function(request, response) {
     orders.forEach(function(order) {
       orders_json.push({id: order.coinbase_id, amount: order.amount, time: order.time});
     });
-    // Uses views/orders.ejs
-    response.render("orders", {orders: orders_json});
+    response.format({
+      html: function() {
+        // Uses views/orders.ejs
+        response.render("orders", {orders: orders_json});
+      },
+      json: function() {
+        response.send(orders_json);
+      }
+    });
   }).error(function(err) {
     console.log(err);
     response.send("error retrieving orders");
